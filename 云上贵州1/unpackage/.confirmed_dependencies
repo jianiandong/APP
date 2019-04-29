@@ -5,7 +5,8 @@
 			"img/语音.png"
 		],
 		"refer": [
-			"html/shouye.html"
+			"html/shouye.html",
+			"html/chengshi.html"
 		]
 	},
 	"html/shouye.html": {
@@ -22,6 +23,24 @@
 			"img/功能快递服务.png",
 			"img/预约挂号 (1).png",
 			"img/驾驶证分.png"
+		]
+	},
+	"html/chengshi.html": {
+		"resources": [
+			"html/chengshiZi.html",
+			"img/语音.png"
+		],
+		"refer": [
+			"html/chengshiZi.html",
+			"index.html"
+		]
+	},
+	"html/chengshiZi.html": {
+		"resources": [
+			"img/语音.png"
+		],
+		"refer": [
+			"index.html"
 		]
 	}
 }

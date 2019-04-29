@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/iconfont4.css" />
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<style>
+			.logo{
+				display: flex;
+				background: #00af65;
+				justify-content: center;
+				align-items: center;
+			}
+			.logo>div{
+				width: 20%;
+				height: 200px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-content: flex-end;
+			}
+			.logo>div>i{
+				width: 100%;
+			}
+			.logo>div>i>img{
+				width: 100%;
+			}
+			.logo>div>b{
+				width: 100%;
+				color: white;
+				text-align: center;
+				margin-bottom: 30px;
+			}
+			.zhanghu{
+				display: flex;
+				justify-content: space-around;
+				background: white;
+				padding: 10px;
+				margin-bottom: 10px;
+			}
+			.zhanghu>span{
+				flex: 1;
+			}
+			.zhanghu>b{
+				flex: 8;
+			}
+			.zhanghu>i{
+				flex: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mine">
+			<div class="logo">
+				<div>
+					<i>
+						<img src="../img/account_image_ataver.png" />
+					</i>
+					<b>登录/注册</b>
+				</div>
+			</div>
+			<div class="zhanghu">
+				<span class="iconfont icon-zhanghuxinxi"></span>
+				<b>账户信息</b>
+				<i class="mui-icon mui-icon-forward"></i>
+			</div>
+			<div class="zhanghu">
+				<span class="iconfont icon-tubiaozhizuomoban"></span>
+				<b>我的办件</b>
+				<i class="mui-icon mui-icon-forward"></i>
+			</div>
+			<div class="zhanghu">
+				<span class="iconfont icon-fenxiang"></span>
+				<b>好友分享</b>
+				<i class="mui-icon mui-icon-forward"></i>
+			</div>
+			<div class="zhanghu">
+				<span class="iconfont icon-fuli"></span>
+				<b>福利</b>
+				<i class="mui-icon mui-icon-forward"></i>
+			</div>
+			<div class="zhanghu">
+				<span class="iconfont icon-guanyu"></span>
+				<b>关于</b>
+				<i class="mui-icon mui-icon-forward"></i>
+			</div>
+			<nav class="mui-bar mui-bar-tab" id="chooseBox">
+			    <a class="mui-tab-item" href="../index.html" id="shouye">
+			        <span class="mui-icon iconfont icon-shouye"></span>
+			        <span class="mui-tab-label">首页</span>
+			    </a>
+			    <a class="mui-tab-item" href="#">
+			        <span class="mui-icon iconfont icon-xinwen"></span>
+			        <span class="mui-tab-label">新闻</span>
+			    </a>
+			    <a class="mui-tab-item" href="#">
+			        <span class="mui-icon" style="width:50px;height:50px;background: #05b66b;border-radius: 50%;text-align: center;margin-bottom: 10px;line-height: 66px;">
+			        	<img src="../img/语音.png" />
+			        </span>
+			    </a>
+			    <a class="mui-tab-item" href="chengshi.html" id="chengshi">
+			        <span class="mui-icon iconfont icon-chengshiicon"></span>
+			        <span class="mui-tab-label">城市</span>
+			    </a>
+			    <a class="mui-tab-item mui-active" href="#">
+			        <span class="mui-icon iconfont icon-home"></span>
+			        <span class="mui-tab-label">我的</span>
+			    </a>
+			</nav>
+		</div>
+		<script>
+			document.getElementById('shouye').addEventListener('tap',function(){
+	      		mui.openWindow({
+				url: '../index.html', 
+				id:'index'
+			})
+	      	})
+			document.getElementById('chengshi').addEventListener('tap',function(){
+	      		mui.openWindow({
+				url: 'chengshi.html', 
+				id:'index'
+			})
+	      	})
+		</script>
+	</body>
+
+</html>

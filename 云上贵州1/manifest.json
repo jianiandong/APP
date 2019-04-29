@@ -133,7 +133,9 @@
 					"html/shouye.html",
 					"img/语音.png"
 				],
-				"refer": [],
+				"refer": [
+					"html/chengshi.html"
+				],
 				"priority": 0
 			},
 			"html/shouye.html": {
@@ -152,6 +154,25 @@
 					"img/驾驶证分.png"
 				],
 				"refer": [],
+				"priority": 0
+			},
+			"html/chengshi.html": {
+				"resources": [
+					"html/chengshiZi.html",
+					"img/语音.png"
+				],
+				"refer": [
+					"index.html"
+				],
+				"priority": 0
+			},
+			"html/chengshiZi.html": {
+				"resources": [
+					"img/语音.png"
+				],
+				"refer": [
+					"index.html"
+				],
 				"priority": 0
 			}
 		},

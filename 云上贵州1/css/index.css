@@ -48,10 +48,11 @@
 }
 .yun>dl>dd:nth-child(2)>p{
 	width: 100%;
-	font-size: 20px;
+	font-size: 15px;
 }
 .yun>dl>dd:nth-child(3){
-	font-size: 20px;
+	width: 30%;
+	font-size: 13px;
 	display: flex;
 	align-items: center;
 }
@@ -87,6 +88,7 @@
 .weizhang>ul>li>b{
 	display: block;
 	width: 100%;
+	font-size: 15px;
 }
 .work{
 	display: flex;

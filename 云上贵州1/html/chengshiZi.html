@@ -3,12 +3,170 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+			  pullRefresh : {
+			    container:"#chengSon",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+			    down : {
+			      style:'circle',//必选，下拉刷新样式，目前支持原生5+ ‘circle’ 样式
+			      color:'#fff', //可选，默认“#2BD009” 下拉刷新控件颜色
+			      height:50,//可选,默认50px.下拉刷新控件的高度,
+//			      range:'100px', //可选 默认100px,控件可下拉拖拽的范围
+//			      offset:'0px', //可选 默认0px,下拉刷新控件的起始位置
+//			      auto: true,//可选,默认false.首次加载自动上拉刷新一次
+//			      callback :pullfresh-function //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+				   contentdown : "",//可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+			      contentover : "",//可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+			      contentrefresh : "",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+ 				  callback:pulldown,
+			    },
+			  }
+			});
+			 function pulldown() {
+		        setTimeout(function () {
+		            mui('#chengSon').pullRefresh().endPulldownToRefresh(); //refresh completed
+		        }, 1500);
+		    }
+		</script>
+		<style>
+			#chengSon{
+				background: white;
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				/*justify-content: space-around;*/
+			}
+			#chengSon>div{
+				width: 100%;
+				position: relative;
+			}
+			#chengSon>div>img{
+				width: 100%;
+			}
+			#chengSon>b{
+				width: 48%;
+				margin: 0 1%;
+				position: relative;
+			}
+			#chengSon>b>img{
+				width: 100%;
+			}
+			#chengSon span{
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				color: white;
+				font-weight: 200;
+			}
+		</style>
 	</head>
 	<body>
-		<div id="chengSon">
-			<div class="guiyang">
-				<img src="../img/1.2.jpg" />
+		<div id="chengSon" class="mui-scroll-wrapper">
+			<div>
+				<img src="../img/3.1.jpg"/>
+				<span>
+					贵阳<br />
+					GuiYang
+				</span>
 			</div>
+			<b>
+				<img src="../img/3.2.jpg" />
+				<span>
+					遵义<br />
+					ZunYi
+				</span>
+			</b>
+			<b>
+				<img src="../img/3.3.jpg" />
+				<span>
+					安顺<br />
+					AnShun
+				</span>
+			</b>
+			<b>
+				<img src="../img/3.4.jpg" />
+				<span>
+					毕节<br />
+					BiJie
+				</span>
+			</b>
+			<b>
+				<img src="../img/3.5.jpg" />
+				<span>
+					铜仁<br />
+					TongRen
+				</span>
+			</b>
+			<b>
+				<img src="../img/3.6.jpg" />
+				<span>
+					黔东南<br />
+					QianDongNan
+				</span>
+			</b>
+			<b>
+				<img src="../img/3.7.jpg" />
+				<span>
+					黔南<br />
+					QianNan
+				</span>
+			</b>
+			<b>
+				<img src="../img/3.8.jpg" />
+				<span>
+					黔西南<br />
+					QianXiNan
+				</span>
+			</b>
+			<b>
+				<img src="../img/3.9.jpg" />
+				<span>
+					六盘水<br />
+					LiuPanShui
+				</span>
+			</b>
+			<b>
+				<img src="../img/3.10.jpg" />
+				<span>
+					贵安新区<br />
+					GuiAnXinQu
+				</span>
+			</b>
 		</div>
+		<!--<nav class="mui-bar mui-bar-tab" id="chooseBox">
+		    <a class="mui-tab-item" href="#" id="shouye">
+		        <span class="mui-icon iconfont icon-shouye"></span>
+		        <span class="mui-tab-label">首页</span>
+		    </a>
+		    <a class="mui-tab-item" href="#">
+		        <span class="mui-icon iconfont icon-xinwen"></span>
+		        <span class="mui-tab-label">新闻</span>
+		    </a>
+		    <a class="mui-tab-item" href="#">
+		        <span class="mui-icon" style="width:50px;height:50px;background: #05b66b;border-radius: 50%;text-align: center;margin-bottom: 10px;line-height: 66px;">
+		        	<img src="../img/语音.png" />
+		        </span>
+		    </a>
+		    <a class="mui-tab-item mui-active" href="#">
+		        <span class="mui-icon iconfont icon-chengshiicon"></span>
+		        <span class="mui-tab-label">城市</span>
+		    </a>
+		    <a class="mui-tab-item" href="#">
+		        <span class="mui-icon iconfont icon-home"></span>
+		        <span class="mui-tab-label">我的</span>
+		    </a>
+		</nav>-->
+		<script>
+//			document.getElementById('shouye').addEventListener('tap',function(){
+//    		mui.openWindow({
+//			url: '../index.html', 
+//			id:'city'
+//		})
+//    	})
+		</script>
 	</body>
 </html>

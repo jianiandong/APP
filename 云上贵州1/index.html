@@ -10,21 +10,12 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/iconfont.css" />
     <script type="text/javascript" charset="utf-8">
-      	mui.init();
+      	
     </script>
 </head>
 <body>
-	<header class="mui-bar mui-bar-nav" id="beijing">
-	    <a class="mui-icon iconfont icon-dizhi mui-pull-left" id="dizhi">贵阳</a>
-	    <div class="mui-title">
-	    	<div id="teshuInp">
-	    		<i class="iconfont icon-sousuo"></i>
-	    		<input type="text" value="请输入">
-	    	</div>
-	    </div>
-	    <a class="mui-icon iconfont icon-xinxi mui-pull-right" style="text-decoration: none;"></a>
-	</header>
-	<nav class="mui-bar mui-bar-tab" id="chooseBox">
+	<div id="index">
+		<nav class="mui-bar mui-bar-tab" id="chooseBox">
 	    <a class="mui-tab-item mui-active" href="#" id="shouye">
 	        <span class="mui-icon iconfont icon-shouye"></span>
 	        <span class="mui-tab-label">首页</span>
@@ -34,15 +25,15 @@
 	        <span class="mui-tab-label">新闻</span>
 	    </a>
 	    <a class="mui-tab-item" href="#">
-	        <span class="mui-icon" style="width:50px;height:50px;background: #05b66b;border-radius: 50%;text-align: center;margin-bottom: 10px;line-height: 50px;">
-	        	<img src="img/语音.png" />
+	        <span class="mui-icon" style="width:50px;height:50px;background: #05b66b;border-radius: 50%;text-align: center;margin-bottom: 10px;line-height: 66px;">
+	        	<img src="../img/语音.png" />
 	        </span>
 	    </a>
-	    <a class="mui-tab-item" href="#" id="chengshi">
+	    <a class="mui-tab-item" href="html/chengshi.html" id="chengshi">
 	        <span class="mui-icon iconfont icon-chengshiicon"></span>
 	        <span class="mui-tab-label">城市</span>
 	    </a>
-	    <a class="mui-tab-item" href="#">
+	    <a class="mui-tab-item" href="#" id="wode">
 	        <span class="mui-icon iconfont icon-home"></span>
 	        <span class="mui-tab-label">我的</span>
 	    </a>
@@ -59,22 +50,23 @@
       	});
       	document.getElementById('shouye').addEventListener('tap',function(){
       		mui.openWindow({
-			url: 'shouye.html', 
-			id:'city'
-		})
-      	})
-      	document.getElementById('dizhi').addEventListener('tap',function(){
-      		mui.openWindow({
-			url: 'html/allCity.html', 
+			url: 'index.html', 
 			id:'city'
 		})
       	})
       	document.getElementById('chengshi').addEventListener('tap',function(){
       		mui.openWindow({
 			url: 'html/chengshi.html', 
-			id:'city'
+			id:'city1'
+		})
+      	})
+      	document.getElementById('wode').addEventListener('tap',function(){
+      		mui.openWindow({
+			url: 'html/wode.html', 
+			id:'mine'
 		})
       	})
 	</script>
+	</div>
 </body>
 </html>

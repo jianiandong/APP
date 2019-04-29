@@ -10,8 +10,18 @@
 		<link rel="stylesheet" href="../css/index.css" />
 		<link rel="stylesheet" href="../css/iconfont.css" />
 	</head>
-	<body>
+	<body style="overflow: hidden;">
 		<div id="first">
+			<header class="mui-bar mui-bar-nav" id="beijing">
+			    <a class="mui-icon iconfont icon-dizhi mui-pull-left" id="dizhi">贵阳</a>
+			    <div class="mui-title">
+			    	<div id="teshuInp">
+			    		<i class="iconfont icon-sousuo"></i>
+			    		<input type="text" value="请输入">
+			    	</div>
+			    </div>
+			    <a class="mui-icon iconfont icon-xinxi mui-pull-right" style="text-decoration: none;"></a>
+			</header>
 			<div id="slider" class="mui-slider" >
 			  <div class="mui-slider-group mui-slider-loop">
 			    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
@@ -220,10 +230,17 @@
 		</div>
 		<div style="background: red;">111</div>
 		<script>
+//			mui('#first').scroll();
 			var gallery = mui('.mui-slider');
 			gallery.slider({
 			  interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
 			});
+			document.getElementById('dizhi').addEventListener('tap',function(){
+      		mui.openWindow({
+			url: 'allCity.html', 
+			id:'city'
+		})
+      	})
 		</script>
 	</body>
 </html>
