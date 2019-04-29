@@ -1,0 +1,27 @@
+{
+	"index.html": {
+		"resources": [
+			"html/shouye.html",
+			"img/语音.png"
+		],
+		"refer": [
+			"html/shouye.html"
+		]
+	},
+	"html/shouye.html": {
+		"resources": [
+			"img/人民币 个人中心.png",
+			"img/车辆查询查询.png",
+			"img/违章查询.png",
+			"img/更多.png",
+			"img/158生活缴费.png",
+			"img/车检.png",
+			"img/公交查询.png",
+			"img/公积金查询2.png",
+			"img/景区.png",
+			"img/功能快递服务.png",
+			"img/预约挂号 (1).png",
+			"img/驾驶证分.png"
+		]
+	}
+}
