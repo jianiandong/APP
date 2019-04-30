@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>子页面</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/new.css" />
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+			  pullRefresh : {
+			    container:"#refreshContainer",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+			    down : {
+			      style:'circle',//必选，下拉刷新样式，目前支持原生5+ ‘circle’ 样式
+			      color:'#fff', //可选，默认“#2BD009” 下拉刷新控件颜色
+			      height:50,//可选,默认50px.下拉刷新控件的高度,
+//			      range:'100px', //可选 默认100px,控件可下拉拖拽的范围
+//			      offset:'0px', //可选 默认0px,下拉刷新控件的起始位置
+//			      auto: true,//可选,默认false.首次加载自动上拉刷新一次
+//			      callback :pullfresh-function //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+				   contentdown : "下拉可以刷新",//可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+			      contentover : "释放立即刷新",//可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+			      contentrefresh : "正在刷新...",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+ 				  callback:pulldown,
+			    },
+			   up:{
+			   	 height:50,//可选.默认50.触发上拉加载拖动距离
+//		      auto:true,//可选,默认false.自动上拉加载一次
+		      contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+		      contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+                callback: pullupRefresh
+			   }
+			  }
+			});
+			 function pulldown() {
+		        setTimeout(function () {
+		        	//querySelector()返回匹配指定选择器的第一个元素;
+		        	//querySelectorAll()返回所有的元素
+		        	//createElement创建一个文本节点
+//		            var table = document.body.querySelector('.mui-table-view');
+//		            var cells = document.body.querySelectorAll('.mui-table-view-cell');
+//		            for (var i = cells.length, len = i + 3; i < len; i++) {
+//		                var li = document.createElement('li');
+//		                li.className = 'mui-table-view-cell';
+//		                li.innerHTML = '<a class="mui-navigate-right">人员名称: ' + (i + 1) + '</a>';
+//		                //下拉刷新，新纪录插到最前面；
+//						table.insertBefore(li, table.firstChild);
+////		                table.insertBefore(li, table.lastChild);/*后添加*/
+//		            }
+		            mui('#refreshContainer').pullRefresh().endPulldownToRefresh(); //refresh completed
+		        }, 1500);
+		    }
+//上拉加载
+			 var count = 0;
+			 function pullupRefresh() {  
+		        setTimeout(function () {
+		            mui('#refreshContainer').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+		            var table = document.body.querySelector('.conMain');
+//		            var cells = document.body.querySelectorAll('.mui-table-view-cell');
+		            var arr = ['<div><b>向梦想出发！习近平发出八句青春之约</b><span>04-30 11:04</span></div><i><img src="../img/3.1.jpg" /></i>','<div><b>八个字，习近平到出生态文明真谛</b><span>04-30 11:04</span></div><i><img src="../img/3.1.jpg" /></i>','<div><b>贵州省“四力”“四全”建设大型主题采访实践活动</b><span>04-30 11:04</span></div><i><img src="../img/3.1.jpg" /></i>','<div><b>扫黑除恶督导进行时</b><span>04-30 11:04</span></div><i><img src="../img/3.1.jpg" /></i>','<div><b>美丽中国</b><span>04-30 11:04</span></div><i><img src="../img/3.1.jpg" /></i>']
+		            
+		            for (var i = 1, len = i + 2; i < len; i++) {
+		            	var index = Math.floor(Math.random()*arr.length);
+		                var li = document.createElement('li');
+//		                li.className = 'mui-table-view-cell';
+		                li.innerHTML = arr[index];
+		                table.appendChild(li);
+		            }
+		             mui('#refreshContainer').pullRefresh().endPullupToRefresh();
+		        }, 1000);
+		    }
+
+
+		</script>
+	</head>
+	<body>
+		<!--下拉刷新容器-->
+		<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+		  <div class="main">
+		  	<div class="yaowen">
+					<a href="#" class="teshu1">要闻</a>
+					<a href="#">推荐</a>
+					<a href="#">综合</a>
+					<a href="#">国内</a>
+					<a href="#">国际</a>
+					<a href="#">直播</a>
+					<a href="#">文化</a>
+					<a href="#">都市新闻</a>
+					<a href="#">视界</a>
+					<a href="#">黔言</a>
+					<a href="#">贵阳</a>
+				</div>
+				<ul class="conMain">
+					<li>
+						<div>
+							<b>向梦想出发！习近平发出八句青春之约</b>
+							<span>04-30 11:04</span>
+						</div>
+						<i>
+							<img src="../img/3.1.jpg" />
+						</i>
+					</li>
+					<li>
+						<div>
+							<b>八个字，习近平到出生态文明真谛</b>
+							<span>04-30 10:04</span>
+						</div>
+						<i>
+							<img src="../img/3.1.jpg" />
+						</i>
+					</li>
+					<li>
+						<div>
+							<b>贵州省“四力”“四全”建设大型主题采访实践活动</b>
+							<span>04-30 11:04</span>
+						</div>
+						<i>
+							<img src="../img/3.1.jpg" />
+						</i>
+					</li>
+					<li>
+						<div>
+							<b>扫黑除恶督导进行时</b>
+							<span>04-30 11:04</span>
+						</div>
+						<i>
+							<img src="../img/3.1.jpg" />
+						</i>
+					</li>
+					<li>
+						<div>
+							<b>美丽中国</b>
+							<span>04-30 11:04</span>
+						</div>
+						<i>
+							<img src="../img/3.1.jpg" />
+						</i>
+					</li>
+					<li>
+						<div>
+							<b>【朗读者｜张宥铭】九美大方</b>
+							<span>04-30 11:04</span>
+						</div>
+						<i>
+							<img src="../img/3.1.jpg" />
+						</i>
+					</li>
+					<li>
+						<div>
+							<b>中国人的故事｜致匠心，奏响新时代劳动者之歌</b>
+							<span>04-30 11:04</span>
+						</div>
+						<i>
+							<img src="../img/3.1.jpg" />
+						</i>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

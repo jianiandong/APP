@@ -1,46 +1,46 @@
 {
-	"index.html": {
-		"resources": [
-			"html/shouye.html",
-			"img/è¯­éŸ³.png"
-		],
-		"refer": [
-			"html/shouye.html",
-			"html/chengshi.html"
-		]
-	},
-	"html/shouye.html": {
-		"resources": [
-			"img/äººæ°‘å¸ ä¸ªäººä¸­å¿ƒ.png",
-			"img/è½¦è¾†æŸ¥è¯¢æŸ¥è¯¢.png",
-			"img/è¿ç« æŸ¥è¯¢.png",
-			"img/æ›´å¤š.png",
-			"img/158ç”Ÿæ´»ç¼´è´¹.png",
-			"img/è½¦æ£€.png",
-			"img/å…¬äº¤æŸ¥è¯¢.png",
-			"img/å…¬ç§¯é‡‘æŸ¥è¯¢2.png",
-			"img/æ™¯åŒº.png",
-			"img/åŠŸèƒ½å¿«é€’æœåŠ¡.png",
-			"img/é¢„çº¦æŒ‚å· (1).png",
-			"img/é©¾é©¶è¯åˆ†.png"
-		]
-	},
-	"html/chengshi.html": {
-		"resources": [
-			"html/chengshiZi.html",
-			"img/è¯­éŸ³.png"
-		],
-		"refer": [
-			"html/chengshiZi.html",
-			"index.html"
-		]
-	},
-	"html/chengshiZi.html": {
-		"resources": [
-			"img/è¯­éŸ³.png"
-		],
-		"refer": [
-			"index.html"
-		]
-	}
+  "index.html": {
+    "resources": [
+      "html/shouye.html",
+      "img/íó.png"
+    ],
+    "refer": [
+      "html/shouye.html",
+      "html/chengshi.html"
+    ]
+  },
+  "html/shouye.html": {
+    "resources": [
+      "img/º *º-Ã.png",
+      "img/f†åâåâ.png",
+      "img/İàåâ.png",
+      "img/ô.png",
+      "img/158;49.png",
+      "img/fÀ.png",
+      "img/l¤åâ.png",
+      "img/lïÑåâ2.png",
+      "img/o:.png",
+      "img/Ÿıë¡.png",
+      "img/„¦÷ (1).png",
+      "img/~vÁ.png"
+    ]
+  },
+  "html/chengshi.html": {
+    "resources": [
+      "html/chengshiZi.html",
+      "img/íó.png"
+    ],
+    "refer": [
+      "html/chengshiZi.html",
+      "index.html"
+    ]
+  },
+  "html/chengshiZi.html": {
+    "resources": [
+      "img/íó.png"
+    ],
+    "refer": [
+      "index.html"
+    ]
+  }
 }

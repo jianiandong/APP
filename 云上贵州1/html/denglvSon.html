@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/iconfont4.css" />
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<style>
+			.conPhone{
+				width: 95%;
+				display: flex;
+				border: 1px solid #CCCCCC;
+				background: white;
+				margin: 10px auto;
+			}
+			.conPhone>i{
+				/*width: 10%;*/
+				font-size: 30px;
+				margin-top: 7px;
+				margin-left: 10px;
+				margin-right: 20px;
+				line-height: 40px;
+			}
+			.conPhone>input{
+				width: 60%;
+				border: none;
+				height: 50px;
+				line-height: 50px;
+			}
+			.conPhone>b{
+				width: 100px;
+				line-height: 50px;
+			}
+			.now{
+				width: 95%;
+				color: white;
+				background: green;
+				font-weight: 400;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				margin: 0 auto;
+				cursor: pointer;
+			}
+			.zhanghu{
+				display: flex;
+				justify-content: space-around;
+				margin-top: 20px;
+			}
+			.zhanghu>b{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="phone" id="phone">
+			<div class="conPhone">
+				<i class="iconfont icon-zhanghuxinxi"></i>
+				<input type="text" value="手机号码"/>
+			</div>
+			<div class="conPhone">
+				<i class="iconfont icon-zhanghuxinxi"></i>
+				<input type="text" value="请输入您的短信验证码"/>
+				<b>获取验证码</b>
+			</div>
+			<div class="now">
+				立即登录
+			</div>
+			<div class="zhanghu">
+				<b>账户密码登录</b>
+				<b>立即登录</b>
+			</div>
+		</div>
+	</body>
+
+</html>

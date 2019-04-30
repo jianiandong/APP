@@ -1,0 +1,47 @@
+ul{
+	padding: 0;
+}
+.teshu1{
+	color: green;
+}
+.yaowen{
+	width: 2000px;
+	height: 30px;
+	position: relative;
+}
+.yaowen>a{
+	margin-right: 50px;
+	margin-left: 20px;
+}
+.main>ul>li{
+	display: flex;
+	border-bottom: 1px solid #CCCCCC;
+	height: 90px;
+}
+.main>ul>li>div{
+	width: 60%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-around;
+}
+.main>ul>li>div>b{
+	width: 100%;
+	color: black;
+	font-size: 14px;
+	font-weight: 700;
+	padding-left: 5px;
+}
+.main>ul>li>div>span{
+	width: 100%;
+	font-size: 13px;
+	color: #B6B6B6;
+	padding-left: 5px;
+}
+.main>ul>li>i{
+	width: 40%;
+	height: 100%;
+}
+.main>ul>li>i>img{
+	width: 100%;
+	height: 100%;
+}

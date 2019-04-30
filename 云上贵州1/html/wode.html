@@ -66,27 +66,27 @@
 					<b>登录/注册</b>
 				</div>
 			</div>
-			<div class="zhanghu">
+			<div class="zhanghu" id="zhanghu">
 				<span class="iconfont icon-zhanghuxinxi"></span>
 				<b>账户信息</b>
 				<i class="mui-icon mui-icon-forward"></i>
 			</div>
-			<div class="zhanghu">
+			<div class="zhanghu" id="banjian">
 				<span class="iconfont icon-tubiaozhizuomoban"></span>
 				<b>我的办件</b>
 				<i class="mui-icon mui-icon-forward"></i>
 			</div>
-			<div class="zhanghu">
+			<div class="zhanghu" id="fenxiang">
 				<span class="iconfont icon-fenxiang"></span>
 				<b>好友分享</b>
 				<i class="mui-icon mui-icon-forward"></i>
 			</div>
-			<div class="zhanghu">
+			<div class="zhanghu" id="fuli">
 				<span class="iconfont icon-fuli"></span>
 				<b>福利</b>
 				<i class="mui-icon mui-icon-forward"></i>
 			</div>
-			<div class="zhanghu">
+			<div class="zhanghu" id="guanyu">
 				<span class="iconfont icon-guanyu"></span>
 				<b>关于</b>
 				<i class="mui-icon mui-icon-forward"></i>
@@ -96,13 +96,13 @@
 			        <span class="mui-icon iconfont icon-shouye"></span>
 			        <span class="mui-tab-label">首页</span>
 			    </a>
-			    <a class="mui-tab-item" href="#">
+			    <a class="mui-tab-item" href="new.html" id="new">
 			        <span class="mui-icon iconfont icon-xinwen"></span>
 			        <span class="mui-tab-label">新闻</span>
 			    </a>
 			    <a class="mui-tab-item" href="#">
 			        <span class="mui-icon" style="width:50px;height:50px;background: #05b66b;border-radius: 50%;text-align: center;margin-bottom: 10px;line-height: 66px;">
-			        	<img src="../img/语音.png" />
+			        	<img src="../img/yuyin.png" />
 			        </span>
 			    </a>
 			    <a class="mui-tab-item" href="chengshi.html" id="chengshi">
@@ -127,7 +127,43 @@
 				url: 'chengshi.html', 
 				id:'index'
 			})
-	      	})
+	      })
+			document.getElementById('new').addEventListener('tap',function(){
+      		mui.openWindow({
+			url: 'new.html', 
+			id:'news'
+		})
+      	})
+			document.getElementById('zhanghu').addEventListener('tap',function(){
+      		mui.openWindow({
+			url: 'denglu.html', 
+			id:'phone'
+		})
+      	})
+			document.getElementById('banjian').addEventListener('tap',function(){
+      		mui.openWindow({
+			url: 'denglu.html', 
+			id:'phone'
+		})
+      	})
+			document.getElementById('fenxiang').addEventListener('tap',function(){
+      		mui.openWindow({
+			url: 'denglu.html', 
+			id:'phone'
+		})
+      	})
+			document.getElementById('fuli').addEventListener('tap',function(){
+      		mui.openWindow({
+			url: 'denglu.html', 
+			id:'phone'
+		})
+      	})
+			document.getElementById('guanyu').addEventListener('tap',function(){
+      		mui.openWindow({
+			url: 'guanyu.html', 
+			id:'guanyu'
+		})
+      	})
 		</script>
 	</body>
 

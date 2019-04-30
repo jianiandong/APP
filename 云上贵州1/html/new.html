@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<script src="../js/mui.min.js"></script>
+		<!--<script type="text/javascript" src="../js/jquery-1.11.1.min.js" ></script>-->
+		
+		<style>
+			ul{
+				padding: 0;
+			}
+			#news{
+				width: 100%;
+				overflow: hidden;
+			}
+			.header>ul{
+				border-bottom: 1px solid #CCCCCC;
+				height: 30px;
+			}
+			.header>ul>li{
+				list-style: none;
+				height: 30px;
+			}
+			.header>ul>li>a{
+				display: block;
+				width: 40px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				text-decoration: none;
+				margin: 0 auto;
+			}
+			.teshu{
+				color: green;
+				border-bottom: 2px solid green;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="news">
+			<div class="header">
+				<ul class="mui-row">
+					<li class="mui-col-sm-4 mui-col-xs-4"><a href="#" class="teshu" id="conHead">新闻</a></li>
+					<li class="mui-col-sm-4 mui-col-xs-4"><a href="#" id="conHead1">视频</a></li>
+					<li class="mui-col-sm-4 mui-col-xs-4"><a href="#" id="conHead2">音频</a></li>
+				</ul>
+			</div>
+			<nav class="mui-bar mui-bar-tab" id="chooseBox">
+			    <a class="mui-tab-item" href="../index.html" id="shouye">
+			        <span class="mui-icon iconfont icon-shouye"></span>
+			        <span class="mui-tab-label">首页</span>
+			    </a>
+			    <a class="mui-tab-item mui-active" href="#" id="new">
+			        <span class="mui-icon iconfont icon-xinwen"></span>
+			        <span class="mui-tab-label">新闻</span>
+			    </a>
+			    <a class="mui-tab-item" href="#">
+			        <span class="mui-icon" style="width:50px;height:50px;background: #05b66b;border-radius: 50%;text-align: center;margin-bottom: 10px;line-height: 66px;">
+			        	<img src="../img/yuyin.png" />
+			        </span>
+			    </a>
+			    <a class="mui-tab-item" href="chengshi.html" id="chengshi">
+			        <span class="mui-icon iconfont icon-chengshiicon"></span>
+			        <span class="mui-tab-label">城市</span>
+			    </a>
+			    <a class="mui-tab-item" href="wode.html" id="wode">
+			        <span class="mui-icon iconfont icon-home"></span>
+			        <span class="mui-tab-label">我的</span>
+			    </a>
+			</nav>
+		</div>
+		<script type="text/javascript">
+			mui.init({
+	      		subpages:[{
+	      			url:'newson.html',
+	      			id:'refreshContainer',
+	      			styles:{
+	      				top:'60px',
+	      				bottom:"60px"
+	      			}
+	      		}]
+	      	});
+	      	document.getElementById("conHead").onclick = function(){
+	      		this.className="teshu";
+	      		document.getElementById("conHead1").className="";
+	      		document.getElementById("conHead2").className="";
+	      	}
+	      	document.getElementById("conHead1").onclick = function(){
+	      		this.className="teshu";
+	      		document.getElementById("conHead").className="";
+	      		document.getElementById("conHead2").className="";
+	      	}
+	      	document.getElementById("conHead2").onclick = function(){
+	      		this.className="teshu";
+	      		document.getElementById("conHead1").className="";
+	      		document.getElementById("conHead").className="";
+	      	}
+	      	
+	      	document.getElementById('shouye').addEventListener('tap',function(){
+	      		mui.openWindow({
+				url: '../index.html', 
+				id:'city'
+			})
+	      	})
+	      	document.getElementById('chengshi').addEventListener('tap',function(){
+	      		mui.openWindow({
+				url: 'chengshi.html', 
+				id:'city1'
+			})
+	      	})
+	      	document.getElementById('wode').addEventListener('tap',function(){
+	      		mui.openWindow({
+				url: 'wode.html', 
+				id:'mine'
+			})
+	      	})
+		</script>
+	</body>
+
+</html>

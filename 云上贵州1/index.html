@@ -20,7 +20,7 @@
 	        <span class="mui-icon iconfont icon-shouye"></span>
 	        <span class="mui-tab-label">首页</span>
 	    </a>
-	    <a class="mui-tab-item" href="#">
+	    <a class="mui-tab-item" href="html/new.html" id="new">
 	        <span class="mui-icon iconfont icon-xinwen"></span>
 	        <span class="mui-tab-label">新闻</span>
 	    </a>
@@ -33,7 +33,7 @@
 	        <span class="mui-icon iconfont icon-chengshiicon"></span>
 	        <span class="mui-tab-label">城市</span>
 	    </a>
-	    <a class="mui-tab-item" href="#" id="wode">
+	    <a class="mui-tab-item" href="html/wode.html" id="wode">
 	        <span class="mui-icon iconfont icon-home"></span>
 	        <span class="mui-tab-label">我的</span>
 	    </a>
@@ -64,6 +64,12 @@
       		mui.openWindow({
 			url: 'html/wode.html', 
 			id:'mine'
+		})
+      	})
+      	document.getElementById('new').addEventListener('tap',function(){
+      		mui.openWindow({
+			url: 'html/new.html', 
+			id:'news'
 		})
       	})
 	</script>
